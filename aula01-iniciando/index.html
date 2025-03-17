@@ -50,24 +50,24 @@
             </div>
             <div>
                 <h2>Tag form</h2>
-                <form action="">
+                <form action="#" method="post">
                     <div>
                         <label for="nome">Nome</label>
-                        <input id="nome" type="text">
+                        <input name="nome" id="nome" type="text">
                     </div>
                     
                     <div>
                         <label for="idade">Idade</label>
-                        <input id="idade" type="number" min="0" max="150">
+                        <input name="idade" id="idade" type="number" min="0" max="150">
                     </div>
 
                     <div>
                         <label for="comentario">Comentário</label><br>
-                        <textarea name="" id="comentario" cols="20" rows="5"></textarea>
+                        <textarea name="comentario" id="comentario" cols="20" rows="5"></textarea>
                     </div>
 
                     <div>
-                        <button type="button">Enviar</button>
+                        <button type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
