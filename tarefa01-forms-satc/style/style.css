@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+
+ html{
+    width: 100vw;
+    height: 100vh;
+ }
+
+/*
+    Header
+*/
+
+.top-nav{
+    margin:0 1.8rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-link{
+    list-style:none;
+    display: flex;
+    align-items: center;
+}
+
+.list-link a{
+    text-decoration: none;
+    color: #232323;
+    font-weight:bold;
+    margin: 1rem;
+}
+
+.list-link a:hover{
+    color: #9DCE3A;
+    text-decoration:underline;
+}
+
+/*
+    Main
+*/
+
+main{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+}
+
+main h1, h3, p, section{
+    padding-top: 1.25rem;
+}
+
+fieldset{
+    border-style: none;
+    padding-top: 10px;
+}
+
