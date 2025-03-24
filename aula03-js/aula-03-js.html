@@ -6,6 +6,25 @@
     <title>Script Interno</title>
 
     <script>
+
+        /*
+        VAR: pode ser usado em todo o programa
+        LET: pode ser usado dentro do escopo onde foi declarada
+        CONST: 
+        */
+
+        function saudacao(nome){
+            console.log(`Olá, ${nome}`);
+        }
+
+        const alerta = function alerta(){
+            console.log("A Terra está em perigo");
+        }
+
+        const gritar = () => {
+            console.log("Eu posso gritar!")
+        }
+
         var alerta1 = "Olá, Mundo!";
         let alerta2 = "Olá, Mundo!";
         const alerta3 = "Olá, Mundo!";
@@ -13,6 +32,19 @@
         console.log(alerta1);
         console.log(alerta2);
         console.log(alerta3);
+
+        {
+            const alerta3 = "Outro valor 2";
+            console.log(alerta3);
+
+            saudacao("Lucas");
+
+            {
+                gritar();
+            }
+
+        }
+
     </script>
 </head>
 <body>
