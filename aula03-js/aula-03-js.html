@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Script Interno</title>
 
-    <script>
+    <script >
+        import {Carro} from './classe-pessoa.js';
 
         /*
         VAR: pode ser usado em todo o programa
@@ -43,6 +44,59 @@
                 gritar();
             }
 
+            // Objtos
+            const pessoa = {
+                nome    : "Lucas",
+                idade   : 19,
+                falar   : function (){
+                    console.log(`Olá, meu nome é ${this.nome}`);
+                }
+            }
+
+            pessoa.falar();
+        }
+
+        //const Carro = require("./classe-carro.js");
+        const carro = new Carro("marc", "model");
+    
+        // Condicionais
+        const idade = 18;
+        if(idade < 18){
+            console.log(`Você é menor de idade.`);
+        }else if(idade <= 65){
+            console.log(`Você é maior de idade.`);
+        }else{
+            console.log(`Você é idoso.`);
+        }
+
+        const cor = "verde";
+        switch(cor){
+            case "vermelho":
+                console.log("A cor é vermelho");
+                break;
+            case "azul":
+                console.log("A cor é azul");
+                break;
+            case "verde":
+                console.log("A cor é verde");
+                break;
+        }
+
+        //const carro = new Carro("MODEL", "MARCA");
+        
+        for(let i = 0; i < 5; i++){
+            console.log(i);
+        }
+
+        let increment = 0
+        while(increment < 5){
+            console.log(increment);
+            increment++;
+        }
+
+        const frutas = ["maçã", "banana", "laranja"];
+        for(let fruta of frutas){
+            console.log(fruta);
         }
 
     </script>
