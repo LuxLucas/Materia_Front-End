@@ -30,7 +30,7 @@ export class User{
         return this.#name;
     }
 
-    getage()
+    getAge()
     {
         return this.#age;
     }
@@ -62,6 +62,14 @@ export class User{
         }else{
             throw new Error("'age' deve ser um inteiro positivo.");
         }
+    }
+
+    // Função de saudação ao usuário - saudarUsuario()
+    greetUser()
+    {
+        let name = this.getName(), age = this.getAge();
+
+        console.log(`Olá, ${name}, você tem ${age} anos. `);
     }
     
 }
