@@ -44,6 +44,8 @@ export class Task{
     }
 
     // Métodos 'setters'
+
+    // Muda o estado da tarefa - marcarComoCompleta()
     changeStatus()
     {
         this.#status = !this.#status;
@@ -62,8 +64,8 @@ export class Task{
     show()
     {
         let id = this.getId(), description = this.getDescription(),
-        status = this.isComplete() ? 'Completo' : 'Não realizado';
+        status = this.isComplete() ? 'Completo' : 'Incompleta';
 
-        return `Id: ${id} \nTarefa: ${description} \nStatus: ${status}`;
+        return `Id: ${id} | Tarefa: ${description} | Status: ${status}`;
     }
 }

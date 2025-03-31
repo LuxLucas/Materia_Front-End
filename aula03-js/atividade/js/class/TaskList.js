@@ -1,11 +1,5 @@
 export class TaskList{
-    #limite;
     #list = [];
-
-    constructor(limite = 25)
-    {
-        this.#limite = limite;
-    }
 
     legth()
     {
@@ -18,7 +12,8 @@ export class TaskList{
         if(task.constructor.name == 'Task'){
             this.#list.push(task);
         }else{
-            throw new Error("O parâmetro não é um objeto de classe 'Task'.");
+            throw new TypeError("O parâmetro não é um objeto de classe 'Task'.");
         }
     }
+
 }

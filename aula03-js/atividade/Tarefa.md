@@ -2,7 +2,7 @@
 
 O desafio a seguir é uma atividade avaliativa a qual valerá 4 pontos, os quais serão somados com outras entregas para formar a nota completa.
 
-## Objetivo
+## Objetivo 
 
 Criar uma aplicação simples que utilize variáveis, funções, escopo, [desestruturação][url-desestruturacao-freecodecamp], operadores de comparação, tipos de dados e manipulação de arrays/objetos. A aplicação deve simular uma "calculadora de tarefas".
 
