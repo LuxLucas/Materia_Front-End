@@ -1,6 +1,7 @@
 export class TaskList{
     #list = [];
 
+    // Retorna a quantidade de tarefas na lista
     legth()
     {
         return this.#list.length;
@@ -16,4 +17,13 @@ export class TaskList{
         }
     }
 
+    // Procura uma tarefa por seu 'id'
+    searchById(id)
+    {
+        for(let task of this.#list){
+            if(task.getId() === id){
+                return task;
+            }
+        }
+    }
 }
