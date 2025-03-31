@@ -16,8 +16,8 @@ export class Task{
     }
 
     // Construtor da classe
-    constructor(description, status){
-        this.#id            = this.#generateId;
+    constructor(description, status = false){
+        this.#id            = this.#generateId();
         this.#description   = description;
         this.#status        = status;
     }
@@ -61,8 +61,9 @@ export class Task{
     // Mostra os detalhes da tarefa
     show()
     {
-        let id = this.getId(), description = this.getDescription(), status = this.isComplete();
+        let id = this.getId(), description = this.getDescription(),
+        status = this.isComplete() ? 'Completo' : 'Não realizado';
 
-        return `Id: ${id} | Tarefa: ${description} | Status: ${status}`;
+        return `Id: ${id} \nTarefa: ${description} \nStatus: ${status}`;
     }
 }
