@@ -3,7 +3,7 @@ export class Task{
     // Atributos privados
     #id;
     #description;
-    #complete;
+    #status;
 
     // Último 'id' instanciado pela classe
     static #lastId = 0;
@@ -16,16 +16,16 @@ export class Task{
     }
 
     // Construtor da classe
-    constructor(description, complete){
+    constructor(description, status){
         this.#id            = this.#generateId;
         this.#description   = description;
-        this.#complete      = complete;
+        this.#status        = status;
     }
 
     // Métodos 'getters'
     isComplete()
     {
-        return this.#complete;
+        return this.#status;
     }
 
     getDescription()
@@ -46,7 +46,7 @@ export class Task{
     // Métodos 'setters'
     changeStatus()
     {
-        this.#complete = !this.#complete;
+        this.#status = !this.#status;
     }
 
     setDescription(description)
@@ -56,5 +56,13 @@ export class Task{
         }else{
             throw new Error("'description' deve ser uma string");
         }
+    }
+
+    // Mostra os detalhes da tarefa
+    show()
+    {
+        let id = this.getId(), description = this.getDescription(), status = this.isComplete();
+
+        return `Id: ${id} | Tarefa: ${description} | Status: ${status}`;
     }
 }
