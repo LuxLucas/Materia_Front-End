@@ -56,15 +56,16 @@ export class Task{
         if(typeof(description) == 'string'){
             this.#description = description;
         }else{
-            throw new Error("'description' deve ser uma string");
+            throw new TypeError("'description' deve ser uma string");
         }
     }
 
     // Mostra os detalhes da tarefa
     show()
     {
-        let id = this.getId(), description = this.getDescription(),
-        status = this.isComplete() ? 'Completo' : 'Incompleta';
+        // Como o enunciado pede, estou usando 'destructuring assignment'
+        let [id, description, status] = [this.getId(), this.getDescription(), 
+        this.isComplete() ? 'Completo' : 'Incompleto'];
 
         return `Id: ${id} | Tarefa: ${description} | Status: ${status}`;
     }
