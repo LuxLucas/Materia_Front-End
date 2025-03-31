@@ -27,7 +27,7 @@ export class TaskList{
         }
     }
     
-    // Remove uma tarefa por seu 'id'
+    // Remove uma tarefa por seu 'id' - removerTarefa()
     removeById(id)
     {
         let task = this.searchById(id);
@@ -35,5 +35,11 @@ export class TaskList{
             let position = this.#list.indexOf(task);
             this.#list.splice(position, 1);
         }
+    }
+
+    // Mostra as informações das tarefas guardadas - listarTarefas()
+    showTasks()
+    {
+        this.#list.forEach((element => console.log(element.show() + '\n')));
     }
 }
