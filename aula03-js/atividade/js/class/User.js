@@ -51,7 +51,7 @@ export class User{
         if(typeof(name) == 'string'){
             this.#name = name;
         }else{
-            throw new Error("'name' deve ser uma string.");
+            throw new TypeError("'name' deve ser uma string.");
         }
     }
 
