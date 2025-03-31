@@ -6,7 +6,5 @@ export class User{
         this.idade  = idade;
     }
 
-    hello(params) {
-        console.log(`Olá, ${this.nome}`);    
-    }
+    
 }
