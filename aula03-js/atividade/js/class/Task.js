@@ -16,10 +16,10 @@ export class Task{
     }
 
     // Construtor da classe
-    constructor(description, status = false){
+    constructor(description){
         this.#id            = this.#generateId();
         this.#description   = description;
-        this.#status        = status;
+        this.#status        = false;
     }
 
     // Métodos 'getters'
