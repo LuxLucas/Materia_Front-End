@@ -1,4 +1,4 @@
-// Definindo uma classe usuário
+// Definindo uma classe usuário e tornando-a exportável
 export class User{
 
     // Atributos privados
@@ -19,12 +19,12 @@ export class User{
     // Método construtor
     constructor(name, age)
     {
-        this.#id     = this.#generateId();
-        this.#name   = name;
-        this.#age  = age;
+        this.#id    = this.#generateId();
+        this.#name  = name;
+        this.#age   = age;
     }
 
-    // Funções 'geters'
+    // Funções 'getters'
     getName()
     {
         return this.#name;
@@ -45,7 +45,7 @@ export class User{
         return User.#lastId;
     }
 
-    // Métodos 'seters'
+    // Métodos 'setters'
     setName(name)
     {
         if(typeof(name) == 'string'){
@@ -69,7 +69,6 @@ export class User{
     {
         let name = this.getName(), age = this.getAge();
 
-        console.log(`Olá, ${name}, você tem ${age} anos. `);
+        return `Olá, ${name}, você tem ${age} anos.`;
     }
-    
 }
