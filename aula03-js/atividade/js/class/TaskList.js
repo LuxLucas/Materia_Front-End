@@ -26,4 +26,14 @@ export class TaskList{
             }
         }
     }
+    
+    // Remove uma tarefa por seu 'id'
+    removeById(id)
+    {
+        let task = this.searchById(id);
+        if(typeof task != "undefined"){
+            let position = this.#list.indexOf(task);
+            this.#list.splice(position, 1);
+        }
+    }
 }
