@@ -17,7 +17,7 @@ Criar uma aplicação simples que utilize variáveis, funções, escopo, [desest
 
 ## Funções.
 
-1. Crie uma função chamada **saudarUsuario** que recebe o nome do usuário e a idade e imprime:
+1. Crie uma função chamada **saudarUsuario** que recebe o nome do usuário, idade e imprime:
 
     ```sh
     Olá, [nome], você tem [idade] anos.  
