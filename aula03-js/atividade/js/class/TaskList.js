@@ -37,9 +37,22 @@ export class TaskList{
         }
     }
 
+    // Altera o estado de uma tarefa pelo 'id' - marcarComoCompleta()
+    changeStatusTaskById(id)
+    {
+        let task = this.searchById(id);
+        if(typeof task != "undefined"){
+            for(let item of this.#list){
+                if (id == item.getId()){
+                    item.changeStatus();
+                }
+            }
+        }
+    }
+
     // Mostra as informações das tarefas guardadas - listarTarefas()
     showTasks()
     {
-        this.#list.forEach((element => console.log(element.show() + '\n')));
+        this.#list.forEach(element => console.log(element.show() + '\n'));
     }
 }

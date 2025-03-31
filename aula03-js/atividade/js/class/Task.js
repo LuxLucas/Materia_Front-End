@@ -45,7 +45,7 @@ export class Task{
 
     // Métodos 'setters'
 
-    // Muda o estado da tarefa - marcarComoCompleta()
+    // Muda o estado da tarefa
     changeStatus()
     {
         this.#status = !this.#status;
