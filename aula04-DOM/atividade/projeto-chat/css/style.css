@@ -1,7 +1,100 @@
 @charset "UTF-8";
 
+/*
+    VARIÁVEIS
+*/
+:root{
+   --navbar-background: #F0F2F5;
+   --navbar-border: #d6d5d5;
+}
+
+/*
+
+*/
+
 *{ 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
  }
+
+ body{
+    height: 100vh;
+    width: 100%;
+ }
+
+ main.container-main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+ }
+
+ /*
+    GENÉRICO
+ */
+
+/*
+    MENU LATERAL
+*/
+
+ aside.aside-menu{
+    height: 100vh;
+    padding: 0 0.55em;
+    background-color: var(--navbar-background);
+    border-right: thin solid var(--navbar-border);
+ }
+
+ nav.menu{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+
+div.btntest{
+   display: flex;
+   justify-content: center;
+   border-radius: 50%;
+}
+
+nav.menu button{
+   padding: 0.5em;
+   background-color: transparent;
+   border: 0;
+   cursor: pointer;
+}
+
+ div.filters{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 0.5em;
+ }
+
+ div.settings{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+ }
+
+ nav.menu img.img-user-menu{
+   width: 2.5em;
+   border-radius: 50%;
+ }
+
+ /*
+    CONTATOS
+ */
+
+div.contact{
+    height: 100%;
+    overflow-x: visible;
+}
+
+article.body-contact{
+    max-height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
