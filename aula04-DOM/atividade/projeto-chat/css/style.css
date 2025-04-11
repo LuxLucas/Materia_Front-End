@@ -6,6 +6,7 @@
 :root{
    --navbar-background: #F0F2F5;
    --navbar-border: #d6d5d5;
+   --border-size-left-menu: 1/16;
 }
 
 /*
@@ -40,23 +41,23 @@
 
  aside.aside-menu{
     height: 100vh;
-    padding: 0 0.55em;
+    min-height: 4rem;
     background-color: var(--navbar-background);
     border-right: thin solid var(--navbar-border);
  }
 
  nav.menu{
     min-height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
  }
 
-
-div.btntest{
+div.border-left-menu-button{
    display: flex;
-   justify-content: center;
-   border-radius: 50%;
+   align-content: center;
+   padding: 0.55em;
 }
 
 nav.menu button{
@@ -66,23 +67,40 @@ nav.menu button{
    cursor: pointer;
 }
 
- div.filters{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-top: 0.5em;
- }
-
- div.settings{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5em;
- }
-
- nav.menu img.img-user-menu{
+nav.menu img.img-user-menu{
    width: 2.5em;
    border-radius: 50%;
- }
+}
+
+div.filters{
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+   
+}
+
+div.settings{
+   display: flex;
+   flex-direction: column;
+}
+
+div.box-menu-button{
+   display: flex;
+   justify-content: center;
+   padding: 0.25em;
+   box-sizing: content-box;
+   width: 3.5em;
+   height: 3em;
+}
+
+div.box-menu-button:hover{
+   background-color: #fafafa;
+}
+
+/*div.box-menu-button div.border-left-menu-button{
+   border-left: 0.15em solid purple;
+   border-right: 0.15em solid transparent;
+} */
 
  /*
     CONTATOS
