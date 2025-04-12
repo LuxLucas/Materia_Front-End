@@ -6,7 +6,7 @@
 :root{
    --navbar-background: #F0F2F5;
    --navbar-border: #d6d5d5;
-   --border-size-left-menu: 1/16;
+   --focused-menu-icon: #8151fd; /* ou #8151fd #5603ad*/
 }
 
 /*
@@ -35,6 +35,10 @@
     GENÉRICO
  */
 
+ .hidden{
+   display: none;
+ }
+
 /*
     MENU LATERAL
 */
@@ -43,6 +47,7 @@
     height: 100vh;
     min-height: 4rem;
     background-color: var(--navbar-background);
+    border-right: thin solid var(--navbar-border);
  }
 
  nav.menu{
@@ -53,29 +58,10 @@
     justify-content: space-between;
  }
 
-div.border-left-menu-button{
-   display: flex;
-   align-content: center;
-   padding: 0.55em;
-}
-
-nav.menu button{
-   padding: 0.5em;
-   background-color: transparent;
-   border: 0;
-   cursor: pointer;
-}
-
-nav.menu img.img-user-menu{
-   width: 2.5em;
-   border-radius: 50%;
-}
-
-div.filters{
+ div.filters{
    display: flex;
    flex-direction: column;
    flex-grow: 1;
-   
 }
 
 div.settings{
@@ -83,23 +69,51 @@ div.settings{
    flex-direction: column;
 }
 
-div.box-menu-button{
+ div.box-menu-button{
    display: flex;
    justify-content: center;
    padding: 0.25em;
    box-sizing: content-box;
    width: 3.5em;
    height: 3em;
+   cursor: pointer;
 }
 
 div.box-menu-button:hover{
    background-color: #fafafa;
 }
 
-/*div.box-menu-button div.border-left-menu-button{
-   border-left: 0.15em solid purple;
-   border-right: 0.15em solid transparent;
-} */
+div.border-left-menu-button{
+   display: flex;
+   align-content: center;
+   padding: 0.55em;
+}
+
+nav.menu button.button-filter, button.button-setting, button.button-account{
+   padding: 0.5em;
+   background-color: transparent;
+   border: 0;
+}
+
+nav.menu img.img-account-menu{
+   width: 2.5em;
+   border-radius: 50%;
+}
+
+svg.full{
+   fill: var(--focused-menu-icon);
+   color: var(--focused-menu-icon);
+}
+
+svg.full path{
+   fill: var(--focused-menu-icon);
+   width: 1.5em;
+   height: 1.5em;
+}
+
+svg.full path.colored-stroke{
+   stroke: var(--focused-menu-icon);
+}
 
  /*
     CONTATOS
