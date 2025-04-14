@@ -158,6 +158,7 @@ div.contact{
 
 header.head-contact{
    padding: 0 1em;
+   border-bottom:thin solid #d6d5d5;
 }
 
 header.head-contact div.container-head-menu{
