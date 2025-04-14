@@ -2,7 +2,7 @@ let menuButtonsBox      = document.querySelectorAll('.menu-button-box');
 let buttonsOfSideMenu   = document.querySelectorAll('aside.aside-menu nav.menu button');
 
 function showBorderLeftMenuButton(HTMLElement){
-    HTMLElement.style.borderLeft   = '0.2em solid var(--focused-menu-icon)';
+    HTMLElement.style.borderLeft   = '0.2em solid var(--focused-icon)';
     HTMLElement.style.borderRight  = '0.2em solid transparent';
 }
 
