@@ -5,8 +5,9 @@
 */
 :root{
    --navbar-background: #F0F2F5;
-   --navbar-border: #d6d5d5;
-   --focused-menu-icon: #8151fd; /* ou #8151fd #5603ad*/
+   --partition-boundary-edge-color: #d6d5d5;
+   --focused-menu-icon: #8151fd;
+   --menu-button-box-hover-color: #fafafa;
 }
 
 /*
@@ -47,7 +48,7 @@
     height: 100vh;
     min-height: 4rem;
     background-color: var(--navbar-background);
-    border-right: thin solid var(--navbar-border);
+    border-right: thin solid var(--partition-boundary-edge-color);
  }
 
  nav.menu{
@@ -69,21 +70,20 @@ div.settings{
    flex-direction: column;
 }
 
- div.box-menu-button{
+ div.menu-button-box{
    display: flex;
    justify-content: center;
    padding: 0.25em;
    box-sizing: content-box;
    width: 3.5em;
-   height: 3em;
    cursor: pointer;
 }
 
-div.box-menu-button:hover{
-   background-color: #fafafa;
+div.menu-button-box:hover{
+   background-color: var(--menu-button-box-hover-color);
 }
 
-div.border-left-menu-button{
+div.left-edge-menu-button{
    display: flex;
    align-content: center;
    padding: 0.55em;
@@ -93,6 +93,13 @@ nav.menu button.button-filter, button.button-setting, button.button-account{
    padding: 0.5em;
    background-color: transparent;
    border: 0;
+   cursor: pointer;
+   display: inline-flex;
+   align-content: center;
+}
+
+nav.menu button.button-account{
+   padding: 0 0.1em;
 }
 
 nav.menu img.img-account-menu{
@@ -115,6 +122,29 @@ svg.full path.colored-stroke{
    stroke: var(--focused-menu-icon);
 }
 
+div.menu-button-box:hover svg.bordered{
+   display: none;
+}
+
+div.menu-button-box:hover svg.full{
+   display: block;
+}
+
+div.left-edge-menu-button.border-active svg.bordered{
+   display: none;
+}
+
+div.left-edge-menu-button.border-active svg.full{
+   display: block;
+}
+
+/* Seleção "chumbada" */
+
+div.left-edge-menu-button.border-active{
+   border-right: 0.2em solid transparent;
+   border-left: 0.2em solid var(--focused-menu-icon);
+}
+
  /*
     CONTATOS
  */
@@ -122,10 +152,31 @@ svg.full path.colored-stroke{
 div.contact{
     height: 100%;
     overflow-x: visible;
+    min-width: 20em;
+    border-right: thin solid var(--partition-boundary-edge-color);
+}
+
+header.head-contact{
+   padding: 0 1em;
+}
+
+header.head-contact div.container-head-menu{
+   display: flex;
+   align-content: center;
+   justify-content: space-between;
+}
+
+div.container-head-menu nav.menu-contact{
+   display: flex;
+   align-items: center;
 }
 
 article.body-contact{
-    max-height: 100%;
-    overflow-y: scroll;
-    scrollbar-width: thin;
+   max-height: 100%;
+   overflow-y: scroll;
+   scrollbar-width: thin;
+}
+
+article.body-contact section.contact{
+   padding: 0 1em;
 }
