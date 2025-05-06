@@ -1,0 +1,9 @@
+<h1>To Do List</h1>
+{{currentTask()}}<br>
+<input type="text" name="tarefa" id="input-tarefa" [(ngModel)]="currentTask" (keyup.enter)="enviar( )">
+<button type="button" (click)="enviar()">Enviar</button>
+<ul class="to-do">
+  @for(task of listaTarefas(); track $index){
+    <li>{{task}}</li>
+  }
+</ul>

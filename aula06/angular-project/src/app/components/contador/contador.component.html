@@ -1,0 +1,17 @@
+<h1>Contador {{sumIncrement()}}</h1>
+<div>
+  <button (click)="incrementar()" type="button">Incrementar</button>
+  <button (click)="decrementar()" type="button">Decrementar</button>
+</div>
+
+@if(sumIncrement() > 0){
+  <p>Contador maior que zero</p>
+}
+
+@if(sumIncrement() === 0){
+  <p>Contador igual a 0</p>
+}
+
+@if(sumIncrement() < 0){
+  <p>Contador menor que 0</p>
+}

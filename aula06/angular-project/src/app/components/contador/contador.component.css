@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+button{
+    padding: 0.5rem;
+    background-color: rgb(153, 46, 180);
+    color: white;
+}

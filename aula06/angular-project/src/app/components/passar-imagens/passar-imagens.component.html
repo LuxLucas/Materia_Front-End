@@ -1,0 +1,6 @@
+<h1>Mostrar imagens</h1>
+<div>
+  <button type="button" class="prev" (click)="retrocederImagem()">Anterior</button>
+  <button type="button" class="next" (click)="procederImagem()">Próximo</button>
+</div>
+<img [src]="imagensList()[indexImagemAtual()]" alt="Imagem"/>
