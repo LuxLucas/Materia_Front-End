@@ -1,0 +1,7 @@
+<p-toolbar class="p-auto justify-items-center ">
+    <ng-template class="flex-1" #start>
+        @for (menu of menus(); track $index){
+            <p-button [label]="menu.label" [icon]="menu.icon" icon="pi pi-chart-bar" class="mr-2 " (onClick)="selectedMenu($index)" text [severity]="menu.selected ? 'primary' : 'secondary'" />
+        }
+    </ng-template>
+</p-toolbar>
