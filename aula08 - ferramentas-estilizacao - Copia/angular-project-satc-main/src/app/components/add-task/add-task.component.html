@@ -1,0 +1,14 @@
+<p-card header="Novo Item" styleClass="m-10">
+    <div class="flex gap-2 mt-5">
+        <p-float-label>
+            <input pInputText [(ngModel)]="description">
+            <label>Descrição</label>
+        </p-float-label>
+        <p-float-label>
+            <p-select [options]="typesTask()" [(ngModel)]="type" [showClear]="true">
+            </p-select>
+            <label>Tipo</label>
+        </p-float-label>
+        <p-button (onClick)="save()" [disabled]="isInvalidButton()" label="Salvar" icon="pi pi-plus"/>
+    </div>
+</p-card>
